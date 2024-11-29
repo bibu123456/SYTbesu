@@ -1,0 +1,4 @@
+curl -X POST --data '{"jsonrpc":"2.0","method":"perm_getNodesAllowlist","params":[], "id":1}' http://10.102.196.103:8545
+
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"perm_removeNodesFromAllowlist","params":[["enode://89ffe4d33b454075e43a2bf62da64d49ea3e804c738dbdb0a8ead52dac426754dd064f904f80069fcfe76bf39fbd38a30375fbb568ac0fc2704e74432aa4a01a@10.102.196.103:30306"]], "id":1}' http://10.102.196.103:8545

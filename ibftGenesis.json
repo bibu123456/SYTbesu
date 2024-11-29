@@ -1,0 +1,37 @@
+{
+  "config": {
+    "chainId": 1337,
+    "berlinBlock": 0,
+    "londonBlock": 0,
+    "zeroBaseFee": true,
+    "contractSizeLimit": 2147483647,
+    "ibft2": {
+      "blockperiodseconds": 2,
+      "epochlength": 400000,
+      "requesttimeoutseconds": 4,
+      "minblockgaslimit": 0,
+      "blockreward": "0",
+      "createemptyblocks": false
+    }
+  },
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "difficulty": "0x1",
+  "extraData": "0xf869a00000000000000000000000000000000000000000000000000000000000000000f83f941223d6615e16dd39bc3f1bf6f451a6389b7376ae944c9c83c748c1f126152b50f89bb52291a3db9b3294e89de55d94dd62c844f2703373655bd80b051b0f808400000000c0",
+  "gasLimit": "0x1fffffffffffff",
+  "mixHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "nonce": "0x0",
+  "timestamp": "0x5c51a607",
+  "alloc": {
+    "1223d6615e16dd39bc3f1bf6f451a6389b7376ae": {
+    	"comment": "Node1 account",
+    	"balance": "0xad78ebc5ac6200000"
+    },
+    "4c9c83c748c1f126152b50f89bb52291a3db9b32": {
+    	"comment": "Node2 account",
+    	"balance": "0xad78ebc5ac6200000"
+    }
+  },
+  "number": "0x0",
+  "gasUsed": "0x0",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+}

@@ -1,0 +1,97 @@
+data-path="/home/node4/SYT/Node4-SYT/data"
+# This is the datapath where the blockchain data will be stored
+network-id=1337
+genesis-file="/home/node4/SYT/ibftGenesis.json"
+# Network
+bootnodes=[
+    "enode://a654569a04cbe637c423361a5d674972ed18c0cb98f1e79af4ac2390bac58367d94df2998f52601d28abc647275b304812e0cd2584c50fdf91358e4815ed8005@10.102.196.103:30303",
+    "enode://af1ef9579e6f64f0203c166ce7a026751ed14462a773ab4870bcf9bdc4ea02645d760d8126e6c7256bd8526d7fee8a8442b8ce50ee920ec5d471c417e372758a@10.102.196.103:30304"
+]
+# allows for the bootnodes to discover each other as they start up. In
+# this example, there are three bootnodes stipulated for this network
+
+#P2P
+p2p-host="10.102.196.103"
+p2p-interface="0.0.0.0"
+p2p-port=30306
+discovery-enabled=true
+remote-connections-limit-enabled=true
+remote-connections-max-percentage=60
+random-peer-priority-enabled=false
+host-allowlist=["*"]
+engine-host-allowlist=["*"]
+engine-rpc-enabled=true
+#engine-jwt-disabled=true
+#max-peers=42
+# SYNC
+sync-mode="FAST"
+#fast-sync-min-peers=1
+
+# Database
+data-storage-format="FOREST"
+
+max-peers=42
+# The maximum number of peer to peer connections this network can
+
+# JSON-RPC
+rpc-http-host="10.102.196.103"
+rpc-http-port=8548
+rpc-ws-enabled=true
+rpc-ws-host="10.102.196.103"
+rpc-ws-port=9004
+rpc-http-api=["ETH","NET","WEB3","IBFT","ADMIN", "PERM","TXPOOL"]
+rpc-http-enabled=true
+rpc-http-cors-origins=["*"]
+engine-rpc-port = 8554
+# GRAPHQL-RPC
+graphql-http-enabled=true
+graphql-http-host="10.102.196.103"
+graphql-http-port=10004
+graphql-http-cors-origins=["*"]
+
+# Transaction Pool
+tx-pool="sequenced"
+#tx-pool-price-bump=0
+tx-pool-blob-price-bump=100
+#strict-tx-replay-protection-enabled=true
+tx-pool-no-local-priority=false
+tx-pool-enable-save-restore=true
+tx-pool-save-file="txpool.dump"
+
+## Layered
+#tx-pool-layer-max-capacity=12500000
+#tx-pool-max-prioritized-by-type=["BLOB=10","FRONTIER=100"]
+#tx-pool-max-future-by-sender=321
+#tx-pool-max-prioritized=4096
+
+## Legacy/Sequenced
+tx-pool-retention-hours=24
+tx-pool-max-size=4096
+tx-pool-limit-by-account-percentage=0.017
+tx-pool-min-gas-price=0
+min-gas-price=0
+
+#miner-enabled=true
+# This option enables mining when the node is started. The type of
+# consensus mechanism will be stipulated in the genesis file
+
+#miner-coinbase="0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"
+# miner-coinbase provides the account to which mining rewards will be
+# paid for this blockchain
+
+#TLS-P2P
+#Xp2p-tls-enabled=true
+#Xp2p-tls-keystore-type="JKS"
+#Xp2p-tls-keystore-file="/home/node2/besu/cert/node2-keystore.jks"
+#Xp2p-tls-keystore-password-file="/home/node2/besu/cert/password.txt"
+#Xp2p-tls-crl-file="/home/kyo/besu/cert/Node2/crl.pem"
+#Xp2p-tls-truststore-type="JKS"
+#Xp2p-tls-truststore-file="/home/node2/besu/cert/node2-truststore.jks"
+#Xp2p-tls-truststore-password-file="/home/node2/besu/cert/password.txt"
+
+permissions-nodes-config-file="/home/node4/SYT/permissions_config.toml"
+permissions-nodes-config-file-enabled=true
+permissions-accounts-config-file="/home/node4/SYT/permissions_accounts_config.toml"
+permissions-accounts-config-file-enabled=true
+
+#logging="TRACE"
